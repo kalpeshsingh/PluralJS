@@ -1,4 +1,5 @@
 import pkg from './package.json';
+import filesize from 'rollup-plugin-filesize';
 
 export default {
 	input: 'src/main.js',
@@ -7,4 +8,5 @@ export default {
 		{ file: pkg.module, format: 'es' },
 		{ file: pkg.browser, format: 'umd', name: 'pluralJS' },
 	],
+	plugins: [filesize()],
 };

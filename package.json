@@ -33,6 +33,7 @@
 	"homepage": "https://github.com/kalpeshsingh/PluralJS#readme",
 	"devDependencies": {
 		"prettier": "^2.0.5",
-		"rollup": "^2.8.2"
+		"rollup": "^2.8.2",
+		"rollup-plugin-filesize": "^8.0.2"
 	}
 }
