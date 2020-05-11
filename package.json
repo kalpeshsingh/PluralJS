@@ -4,8 +4,7 @@
 	"description": "A tiny library to convert any singular english words to plural",
 	"main": "dist/main.cjs.js",
 	"module": "dist/pluraljs.esm.js",
-	"browser": "dist/pluraljs.umd.js",
-	"cdn": "dist/pluraljs.min.js",
+	"browser": "dist/pluraljs.umd.min.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"format": "prettier --write \"src/*.{js,json,md}\"",
@@ -34,6 +33,7 @@
 	"devDependencies": {
 		"prettier": "^2.0.5",
 		"rollup": "^2.8.2",
-		"rollup-plugin-filesize": "^8.0.2"
+		"rollup-plugin-filesize": "^8.0.2",
+		"rollup-plugin-terser": "^5.3.0"
 	}
 }
