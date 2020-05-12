@@ -1,6 +1,7 @@
 import pkg from './package.json';
 
 /** Plugins **/
+import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
 
@@ -11,5 +12,9 @@ export default {
 		{ file: pkg.module, format: 'es' },
 		{ file: pkg.browser, format: 'umd', name: 'pluralJS' },
 	],
-	plugins: [terser({ include: [/^.+\.min\.js$/] }), filesize()],
+	plugins: [
+		babel({ exclude: 'node_modules/**' }),
+		terser({ include: [/^.+\.min\.js$/] }),
+		filesize(),
+	],
 };

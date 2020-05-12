@@ -31,6 +31,9 @@
 	},
 	"homepage": "https://github.com/kalpeshsingh/PluralJS#readme",
 	"devDependencies": {
+		"@babel/core": "^7.9.6",
+		"@babel/preset-env": "^7.9.6",
+		"@rollup/plugin-babel": "^5.0.0",
 		"prettier": "^2.0.5",
 		"rollup": "^2.8.2",
 		"rollup-plugin-filesize": "^8.0.2",
