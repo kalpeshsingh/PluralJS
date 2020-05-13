@@ -1,6 +1,6 @@
 {
 	"name": "pluraljs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A tiny library to convert any singular english words to plural",
 	"main": "dist/main.cjs.js",
 	"module": "dist/pluraljs.esm.js",
