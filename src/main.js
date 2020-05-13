@@ -1,9 +1,10 @@
-const sayHello = () => {
-	console.log('Hello PluralJS!');
+'use strict';
+
+/** Helpers **/
+import endsWith from './helpers/endsWith';
+
+const pluralJs = (string) => {
+	return endsWith(string, ['s']);
 };
 
-const greet = (name) => {
-	console.log('Hey', name);
-};
-
-export { sayHello, greet };
+export default pluralJs;
