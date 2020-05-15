@@ -6,15 +6,30 @@
 	</head>
 	<body>
 		<h1>Hello Plural</h1>
+		<form>
+			<input id="input" type="text" />
+			<output id="output"></output>
+			<button id="btn">Get result</button>
+		</form>
 	</body>
 
 	<script type="module">
 		import pluralJs from '../dist/pluraljs.esm.js';
-		console.log(pluralJs('people'));
+
+		const btn = document.getElementById('btn');
+		const output = document.getElementById('output');
+
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+			const string = document.getElementById('input').value;
+			const result = pluralJs(string);
+
+			output.innerText = result;
+		});
 	</script>
 
 	<!--<script src="../dist/pluraljs.umd.min.js"></script>-->
 	<!--<script>-->
-		<!--console.log(pluralJS);-->
+	<!--console.log(pluralJS);-->
 	<!--</script>-->
 </html>
