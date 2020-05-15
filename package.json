@@ -52,5 +52,8 @@
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
+	},
+	"dependencies": {
+		"pluralize": "^8.0.0"
 	}
 }
