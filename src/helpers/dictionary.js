@@ -1,51 +1,174 @@
-//  In some cases, singular nouns ending in -s or -z, need double the -s or -z prior to adding the -es for pluralization.
-const doubleTheS = {
-	fez: 'fezzes',
-	gas: 'gasses',
-};
+/**
+ * Uncountable rules.
+ * // Singular words with no plurals.
+ */
+const uncountableNouns = [
+	'adulthood',
+	'advice',
+	'agenda',
+	'aid',
+	'aircraft',
+	'alcohol',
+	'ammo',
+	'analytics',
+	'anime',
+	'athletics',
+	'audio',
+	'bison',
+	'blood',
+	'bream',
+	'buffalo',
+	'butter',
+	'carp',
+	'cash',
+	'chassis',
+	'chess',
+	'clothing',
+	'cod',
+	'commerce',
+	'cooperation',
+	'corps',
+	'debris',
+	'diabetes',
+	'digestion',
+	'elk',
+	'energy',
+	'equipment',
+	'excretion',
+	'expertise',
+	'firmware',
+	'flounder',
+	'fun',
+	'gallows',
+	'garbage',
+	'graffiti',
+	'hardware',
+	'headquarters',
+	'health',
+	'herpes',
+	'highjinks',
+	'homework',
+	'housework',
+	'information',
+	'jeans',
+	'justice',
+	'kudos',
+	'labour',
+	'literature',
+	'machinery',
+	'mackerel',
+	'mail',
+	'media',
+	'mews',
+	'moose',
+	'music',
+	'mud',
+	'manga',
+	'news',
+	'only',
+	'personnel',
+	'pike',
+	'plankton',
+	'pliers',
+	'police',
+	'pollution',
+	'premises',
+	'rain',
+	'research',
+	'rice',
+	'salmon',
+	'scissors',
+	'series',
+	'sewage',
+	'shambles',
+	'shrimp',
+	'software',
+	'staff',
+	'swine',
+	'tennis',
+	'traffic',
+	'transportation',
+	'trout',
+	'tuna',
+	'wealth',
+	'welfare',
+	'whiting',
+	'wildebeest',
+	'wildlife',
+	'you',
+];
 
-//  If the noun ends with ‑f or ‑fe, the f is often changed to ‑ve before adding the -s to form the plural version.
-// but these are exceptions
+/**
+ * Uncountable nouns with different variants
+ * @type {RegExp[]}
+ */
+const uncountableNounPatterns = [
+	// Regexes.
+	/[^aeiou]ese$/i, // "chinese", "japanese"
+	/deer$/i, // "deer", "reindeer"
+	/fish$/i, // "fish", "blowfish", "angelfish"
+	/measles$/i,
+	/o[iu]s$/i, // "carnivorous"
+	/pox$/i, // "chickpox", "smallpox"
+	/sheep$/i,
+];
 
-const endsWithF = {
-	roof: 'roofs',
-	belief: 'beliefs',
-	chef: 'chefs',
-	chief: 'chiefs',
-};
-
-const endsWithO = {
-	photo: 'photos',
-	piano: 'pianos',
-	halo: 'halos',
-};
-
-const unchangeNoun = {
-	sheep: 'sheep',
-	series: 'series',
-	species: 'species',
-	deer: 'deer',
-	fish: 'fish',
-};
-
-const irregularNoun = {
-	child: 'children',
-	goose: 'geese',
-	man: 'men',
-	woman: 'women',
-	tooth: 'teeth',
+/**
+ * Irregular rules.
+ */
+const irregularNouns = {
+	// Pronouns.
+	I: 'we',
+	me: 'us',
+	he: 'they',
+	she: 'they',
+	them: 'them',
+	myself: 'ourselves',
+	yourself: 'yourselves',
+	itself: 'themselves',
+	herself: 'themselves',
+	himself: 'themselves',
+	themself: 'themselves',
+	thou: 'you',
+	is: 'are',
+	was: 'were',
+	has: 'have',
+	this: 'these',
+	that: 'those',
+	// Words ending in with a consonant and `o`.
+	echo: 'echoes',
+	dingo: 'dingoes',
+	volcano: 'volcanoes',
+	tornado: 'tornadoes',
+	torpedo: 'torpedoes',
+	// Ends with `us`.
+	genus: 'genera',
+	viscus: 'viscera',
+	// Ends with `ma`.
+	stigma: 'stigmata',
+	stoma: 'stomata',
+	dogma: 'dogmata',
+	lemma: 'lemmata',
+	schema: 'schemata',
+	anathema: 'anathemata',
+	// Other irregular rules.
+	ox: 'oxen',
+	axe: 'axes',
+	die: 'dice',
+	yes: 'yeses',
 	foot: 'feet',
-	mouse: 'mice',
-	person: 'people',
+	eave: 'eaves',
+	goose: 'geese',
+	tooth: 'teeth',
+	quiz: 'quizzes',
+	human: 'humans',
+	proof: 'proofs',
+	carve: 'carves',
+	valve: 'valves',
+	looey: 'looies',
+	thief: 'thieves',
+	groove: 'grooves',
+	pickaxe: 'pickaxes',
+	passerby: 'passersby',
 };
-
-const dictionary = Object.assign(
-	{},
-	doubleTheS,
-	endsWithF,
-	endsWithO,
-	unchangeNoun,
-	irregularNoun
-);
-
-export default dictionary;
+export { irregularNouns, uncountableNouns, uncountableNounPatterns };

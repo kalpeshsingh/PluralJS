@@ -1,31 +1,55 @@
 'use strict';
 
 /** Helpers **/
-import endsWith from './helpers/endsWith';
-import dictionary from './helpers/dictionary';
+import {
+	irregularNouns,
+	uncountableNouns,
+	uncountableNounPatterns,
+} from './helpers/dictionary';
+import rules from './helpers/rules';
 
-const pluralJs = (string) => {
-	if (dictionary[string]) {
-		return dictionary[string];
-	} else if (endsWith(string, 'us')) {
-		return string.replace(/us$/, 'i');
-	} else if (endsWith(string, 'is')) {
-		return string.replace(/is$/, 'es');
-	} else if (endsWith(string, 'on')) {
-		return string.replace(/on$/, 'a');
-	} else if (endsWith(string, ['s', 'ss', 'sh', 'ch', 'x', 'z', 'o'])) {
-		return `${string}es`;
-	} else if (endsWith(string, ['f', 'fe'])) {
-		return string.replace(/fe|f$/, 'ves');
-	} else if (endsWith(string, 'y')) {
-		if (['a', 'e', 'i', 'o', 'u'].includes(string.substr(-2, 1))) {
-			return `${string}s`;
-		} else {
-			return string.replace(/.$/, 'ies');
-		}
-	} else {
-		return `${string}s`;
+const pluralJs = (word) => {
+	let result = word;
+
+	/**
+	 * If the word already exist in the uncountable noun then return same word.
+	 * Singular word with no plural. Example - advice, blood, rice, staff etc.
+	 */
+	if (uncountableNouns.includes(word)) {
+		return word;
 	}
+
+	/**
+	 * If the word already exist in irregular noun then return the irregular noun.
+	 * Example - I => We, stigma => stigmata, die => dice etc.
+	 */
+	if (irregularNouns[word]) {
+		return irregularNouns[word];
+	}
+
+	/**
+	 * If the word is not part of uncountable nouns and  irregular nouns then apply grammar rules.
+	 * If the grammar rules has word then it will store in result and check in uncountableNounPatterns function.
+	 * In uncountableNounPatterns function, it won't find the result obtained from rules so it will just return
+	 * result obtained from rules.
+	 */
+	rules.forEach((rule) => {
+		if (rule[0].test(word)) {
+			result = word.replace(rule[0], rule[1]);
+		}
+	});
+
+	/**
+	 * If all the above condition is failed, then we will check uncountable noun pattern.
+	 * If it has then return else return result obtained from rules.
+	 */
+	uncountableNounPatterns.find((rule) => {
+		if (rule.test(word)) {
+			result = word;
+		}
+	});
+
+	return result;
 };
 
 export default pluralJs;
