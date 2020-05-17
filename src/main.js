@@ -1,6 +1,6 @@
 'use strict';
 
-import pkg from '../package.json';
+import { version } from '../package.json';
 
 /** Helpers **/
 import {
@@ -54,6 +54,6 @@ const pluralJs = (word) => {
 	return result;
 };
 
-pluralJs.VERSION = pkg.version;
+pluralJs.VERSION = version;
 
 export default pluralJs;
