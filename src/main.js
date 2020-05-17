@@ -1,5 +1,7 @@
 'use strict';
 
+import pkg from '../package.json';
+
 /** Helpers **/
 import {
 	irregularNouns,
@@ -51,5 +53,7 @@ const pluralJs = (word) => {
 
 	return result;
 };
+
+pluralJs.VERSION = pkg.version;
 
 export default pluralJs;
