@@ -1,7 +1,7 @@
 {
 	"name": "pluraljs",
 	"version": "0.0.1",
-	"description": "A tiny library to convert any singular english words to plural",
+	"description": "A micro library to produce any singular noun into plural\n\n",
 	"main": "dist/main.cjs.js",
 	"module": "dist/pluraljs.esm.js",
 	"browser": "dist/pluraljs.umd.min.js",
@@ -26,9 +26,17 @@
 	"keywords": [
 		"plural",
 		"singular",
-		"words"
+		"words",
+		"pluralization",
+		"inflection",
+		"nouns"
 	],
-	"author": "Kalpesh Singh",
+	"readmeFilename": "README.md",
+	"author": {
+		"name": "Kalpesh Singh",
+		"email": "kalpeshsingh07@gmail.com",
+		"url": "https://knowkalpesh.in"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/kalpeshsingh/PluralJS/issues"
