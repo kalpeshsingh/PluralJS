@@ -93,5 +93,7 @@ Kalpesh Singh ([@knowkalpesh](https://twitter.com/knowkalpesh))
 - Those lovely cats artwork used for branding is from [Undraw](https://undraw.co/)
 
 ### ⚖️ License
+
 ---
+
 kalpeshsingh/PluralJS is licensed under the [MIT license](https://opensource.org/licenses/MIT).
