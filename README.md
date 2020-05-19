@@ -4,6 +4,14 @@
 <h3 align="center">
   PluralJS
 </h3>
+
+<p align="center">
+  <a href="https://npmjs.org/package/pluraljs" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/npm/v/pluraljs.svg?style=flat" alt="NPM version">
+  </a>
+    <img src="https://img.shields.io/github/size/kalpeshsingh/pluraljs/src/main.js.svg?style=flat" alt="File size">
+</p>
+
 <p  align="center">A micro library to produce any singular noun into plural
   
 ### 💡 Motive
