@@ -66,7 +66,7 @@ console.log(pluralJs(cat)); // cats
 ```html
 <script src="https://cdn.jsdelivr.net/npm/pluraljs/dist/pluraljs.umd.min.js"></script>
 <script>
-	console.log(pluralJS(cat)); // cats
+	console.log(pluralJs(cat)); // cats
 </script>
 ```
 
