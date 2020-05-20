@@ -62,14 +62,14 @@ It takes only a noun and produce plural noun out of it.
 
 ```node
 const pluralJs = require('pluraljs');
-console.log(pluralJs("cat")); // cats
+console.log(pluralJs('cat')); // cats
 ```
 
 #### ES6
 
 ```js
 import pluraJs from 'pluraljs';
-console.log(pluralJs("cat")); // cats
+console.log(pluralJs('cat')); // cats
 ```
 
 #### Browser
@@ -77,7 +77,7 @@ console.log(pluralJs("cat")); // cats
 ```html
 <script src="https://cdn.jsdelivr.net/npm/pluraljs/dist/pluraljs.umd.min.js"></script>
 <script>
-	console.log(pluralJs("cat")); // cats
+	console.log(pluralJs('cat')); // cats
 </script>
 ```
 
