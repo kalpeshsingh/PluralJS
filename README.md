@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/src/assests/pluraljs.svg" />
+  <img src="/src/assets/pluraljs.svg" />
 </p>
 <h3 align="center">
   PluralJS
@@ -85,9 +85,9 @@ console.log(pluralJs('cat')); // cats
 
 ---
 
-| Product without words pluralization                                                                                   | Product using PluralJS                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| <img width="300px" src="/src/assests/sample_without_pluralization.png" alt="Screenshot - Product not using PluralJS"> | <img width="300px" src="/src/assests/sample_with_pluralization.png" alt="Screenshot - Product using PluralJS"> |
+| Product without words pluralization                                                                                  | Product using PluralJS                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| <img width="300px" src="/src/assets/sample_without_pluralization.png" alt="Screenshot - Product not using PluralJS"> | <img width="300px" src="/src/assets/sample_with_pluralization.png" alt="Screenshot - Product using PluralJS"> |
 
 ### 💂‍♂️Maintainer
 
