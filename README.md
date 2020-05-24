@@ -56,13 +56,23 @@ curl -o https://unpkg.com/pluraljs/dist/pluraljs.umd.min.js
 ---
 
 The PluralJS is single responsibility library.
-It takes only a noun and produce plural noun out of it.
+It takes only a noun (with optional count parameter) and produce plural noun out of it.
+
+#### API
+
+| parameter | description                       | type   | required | example                                                    |
+| --------- | --------------------------------- | ------ | -------- | ---------------------------------------------------------- |
+| word      | a word to pluralize               | string | yes      | pluralJs('cat') // cats                                    |
+| count     | pluralize the word based on count | number | no       | pluralJs('cat', 3) // cats <br/> pluralJs('cat', 1) // cat |
 
 #### Node
 
 ```node
 const pluralJs = require('pluraljs');
 console.log(pluralJs('cat')); // cats
+
+console.log(pluralJs('cat', 1)); // cat
+console.log(pluralJs('cat', 3)); // cats
 ```
 
 #### ES6
@@ -70,6 +80,8 @@ console.log(pluralJs('cat')); // cats
 ```js
 import pluraJs from 'pluraljs';
 console.log(pluralJs('cat')); // cats
+
+console.log(pluralJs('cat', -4)); // cat
 ```
 
 #### Browser
@@ -78,6 +90,7 @@ console.log(pluralJs('cat')); // cats
 <script src="https://cdn.jsdelivr.net/npm/pluraljs/dist/pluraljs.umd.min.js"></script>
 <script>
 	console.log(pluralJs('cat')); // cats
+	console.log(pluralJs('cat', '4')); // cats
 </script>
 ```
 
@@ -88,6 +101,18 @@ console.log(pluralJs('cat')); // cats
 | Product without words pluralization                                                                                  | Product using PluralJS                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | <img width="300px" src="/src/assets/sample_without_pluralization.png" alt="Screenshot - Product not using PluralJS"> | <img width="300px" src="/src/assets/sample_with_pluralization.png" alt="Screenshot - Product using PluralJS"> |
+
+### 📋 Changelog
+
+---
+
+**1.1.0**
+
+- `ENHANCEMENT` Added ability to pass count parameter
+
+**1.0.0**
+
+- `FEATURE` Released first stable version
 
 ### 💂‍♂️Maintainer
 

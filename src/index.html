@@ -2,12 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Title</title>
+		<title>PluralJS Playground</title>
 	</head>
 	<body>
 		<h1>Hello Plural</h1>
 		<form>
 			<input id="input" type="text" />
+			<input id="count" type="text" />
 			<output id="output"></output>
 			<button id="btn">Get result</button>
 		</form>
@@ -22,14 +23,15 @@
 		btn.addEventListener('click', (e) => {
 			e.preventDefault();
 			const string = document.getElementById('input').value;
-			const result = pluralJs(string);
+			const count = document.getElementById('count').value;
+			const result = pluralJs(string, count);
 
 			output.innerText = result;
 		});
 	</script>
 
-	<!--<script src="../dist/pluraljs.umd.min.js"></script>-->
-	<!--<script>-->
-	<!--console.log(pluralJS);-->
-	<!--</script>-->
+	<script src="../dist/pluraljs.umd.min.js"></script>
+	<script>
+		console.log(pluralJs);
+	</script>
 </html>
