@@ -10,7 +10,20 @@ import {
 } from './helpers/dictionary';
 import rules from './helpers/rules';
 
-const pluralJs = (word) => {
+/**
+ * The function to return plural based on word and count
+ * @param word {string} - A word to make plural
+ * @param count {number} - A count to make plural if > 1
+ * @returns * {string} - Returns plural word
+ */
+const pluralJs = (word, count) => {
+	if (
+		typeof count != 'undefined' &&
+		(Number.isNaN(count) || count != Number(count) || Math.round(count) <= 1)
+	) {
+		return word;
+	}
+
 	let result = word;
 
 	/**

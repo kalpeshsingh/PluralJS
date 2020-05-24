@@ -1,6 +1,6 @@
 {
 	"name": "pluraljs",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"description": "A micro library to produce any singular noun into plural\n\n",
 	"main": "dist/main.cjs.js",
 	"module": "dist/pluraljs.esm.js",

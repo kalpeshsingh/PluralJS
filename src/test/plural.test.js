@@ -650,3 +650,31 @@ BASIC_TESTS.forEach(function (item) {
 		expect(pluralJs(word)).toBe(plural);
 	});
 });
+
+for (let i = 0; i <= BASIC_TESTS.length / 10; i++) {
+	const [word, plural] = BASIC_TESTS[i];
+	test(`${word} with count > 1`, () => {
+		expect(pluralJs(word, 2)).toBe(plural);
+	});
+	test(`${word} with count 1`, () => {
+		expect(pluralJs(word, 1)).toBe(word);
+	});
+	test(`${word} with negative count`, () => {
+		expect(pluralJs(word, -1)).toBe(word);
+	});
+	test(`${word} with negative count`, () => {
+		expect(pluralJs(word, -4)).toBe(word);
+	});
+	test(`${word} with count invalid number`, () => {
+		expect(pluralJs(word, NaN)).toBe(word);
+	});
+	test(`${word} with count decimals`, () => {
+		expect(pluralJs(word, 3.14)).toBe(plural);
+	});
+	test(`${word} with count string`, () => {
+		expect(pluralJs(word, '3')).toBe(plural);
+	});
+	test(`${word} with count non-number string`, () => {
+		expect(pluralJs(word, 'plural')).toBe(word);
+	});
+}
